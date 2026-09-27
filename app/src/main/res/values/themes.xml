@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.AIBot" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">#e94560</item>
+        <item name="colorPrimaryVariant">#0f3460</item>
+        <item name="colorOnPrimary">#ffffff</item>
+        <item name="colorSecondary">#16213e</item>
+        <item name="colorOnSecondary">#ffffff</item>
+        <item name="android:windowBackground">#1a1a2e</item>
+        <item name="android:statusBarColor">#0f3460</item>
+    </style>
+
+    <style name="Theme.AIBot.NoActionBar" parent="Theme.AIBot">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">#000000</item>
+    </style>
+</resources>

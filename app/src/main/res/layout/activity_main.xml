@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#000000">
+
+    <!-- Header - minimal like ChatGPT -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:background="#121212"
+        android:gravity="center_vertical"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="AIBot"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <ImageButton
+            android:id="@+id/menuButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@android:drawable/ic_menu_more"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:tint="#9e9e9e"/>
+    </LinearLayout>
+
+    <!-- Status - very subtle -->
+    <TextView
+        android:id="@+id/statusText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#0f0f0f"
+        android:textColor="#8e8e8e"
+        android:textSize="11sp"
+        android:padding="5dp"
+        android:paddingStart="12dp"
+        android:text="Offline model • Ready • Private on-device"
+        android:singleLine="true"
+        android:ellipsize="end"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:progressTint="#ffffff"
+        android:visibility="gone"/>
+
+    <!-- Chat -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chatRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="12dp"
+        android:clipToPadding="false"/>
+
+    <!-- Input - pill shape like ChatGPT -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#000000"
+        android:padding="12dp"
+        android:gravity="center_vertical">
+
+        <EditText
+            android:id="@+id/inputField"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Ask AIBot..."
+            android:textColorHint="#6e6e6e"
+            android:textColor="#ffffff"
+            android:background="@android:drawable/editbox_background"
+            android:backgroundTint="#1e1e1e"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp"
+            android:paddingTop="14dp"
+            android:paddingBottom="14dp"
+            android:maxLines="5"
+            android:inputType="textMultiLine"
+            android:textSize="15sp"/>
+
+        <ImageButton
+            android:id="@+id/sendButton"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="10dp"
+            android:src="@android:drawable/ic_menu_send"
+            android:background="@android:drawable/btn_default"
+            android:backgroundTint="#ffffff"
+            android:tint="#000000"
+            android:padding="10dp"/>
+    </LinearLayout>
+</LinearLayout>
