@@ -139,6 +139,10 @@ public class MainActivity extends AppCompatActivity {
                 tokenizer = new Tokenizer();
                 nars = new NARSEngine();
                 weightManager = new WeightManager(MainActivity.this, nn, tokenizer, nars);
+                if(weightManager.hasExistingWeights()){
+                weightManager.loadAll();
+                Log.d(TAG, "Loaded existing weights");
+            }
                 selfLearner = new SelfLearner(nn, tokenizer, nars, weightManager);
                 webSearch = new WebSearch();
                 webFetch = new WebFetch();
